@@ -11,7 +11,7 @@ Modification of tf.contrib.learn.Estimator to prevent reloading model on each pr
 6. It was tested with TensorFlow 1.0.1 
 
 # Example
-'''
+```
  #provide your model_fn and model_dir to initialize Estimator
  classifier = tf.contrib.learn.Estimator(
         model_fn=cnn_model_fn, model_dir=model_path)
@@ -20,4 +20,4 @@ Modification of tf.contrib.learn.Estimator to prevent reloading model on each pr
  cls = predictions['classes'][0]
  pred_class = mapping[cls]
  prob = np.max(predictions['probabilities'][0][cls])
-'''
+```
